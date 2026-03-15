@@ -1,8 +1,16 @@
 # MadAppGang Homebrew Tap
 
-Install tools from MadAppGang:
+Unified Homebrew tap for MadAppGang tools.
+
+## Usage
 
 ```bash
 brew tap MadAppGang/tap
-brew install mnemex
 ```
+
+## Available Formulas
+
+| Formula | Description | Install |
+|---------|-------------|---------|
+| meroku  | Easy infrastructure management | `brew install meroku` |
+| mnemex  | Semantic code search and AST analysis | `brew install mnemex` |
