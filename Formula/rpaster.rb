@@ -5,21 +5,21 @@
 class Rpaster < Formula
   desc "Paste clipboard images into remote tmux sessions over SSH"
   homepage "https://github.com/MadAppGang/tmux-copy-image"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.2/rpaster_darwin_amd64.tar.gz"
-      sha256 "9b140b95b608e9e1da04d90f592c83c1ced937a57d8d519a5ff9b2715655ad1a"
+      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.3/rpaster_darwin_amd64.tar.gz"
+      sha256 "1213a3e6550513f2d82e73452dbc5c87ce239683f3a09c51a9a35b89d5604673"
 
       define_method(:install) do
         bin.install "rpaster"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.2/rpaster_darwin_arm64.tar.gz"
-      sha256 "c87ea69fd248482db9a17eaee54993322f5e05947040a958729d28f9d9ec82c4"
+      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.3/rpaster_darwin_arm64.tar.gz"
+      sha256 "fe9f10bd3b07f73e4a0aac557f75fc5ae198533c0294424c9afd7f4e04993990"
 
       define_method(:install) do
         bin.install "rpaster"
@@ -29,19 +29,52 @@ class Rpaster < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.2/rpaster_linux_amd64.tar.gz"
-      sha256 "4acc57a02545edb3890a5ea104c40a51f3853ac566db807e593bc2d69a6760ee"
+      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.3/rpaster_linux_amd64.tar.gz"
+      sha256 "bd7db6e737c81d157b3ea30eb3adcf57e23b49e531b93b0c3f4cc73df55f293b"
       define_method(:install) do
         bin.install "rpaster"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.2/rpaster_linux_arm64.tar.gz"
-      sha256 "0a7c28aa26bae3275e9995a6f4d42dd9cfb786fb6db7dd46864de0609934bece"
+      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.3/rpaster_linux_arm64.tar.gz"
+      sha256 "c6a57c08f8700a2c8bf0da645ad43aca5a421053114b91cced1b2e40bf657c89"
       define_method(:install) do
         bin.install "rpaster"
       end
     end
+  end
+
+  def caveats
+    <<~EOS
+      ┌─────────────────────────────────────────────────────┐
+      │  rpaster — clipboard image paste over SSH           │
+      └─────────────────────────────────────────────────────┘
+
+      Step 1: Start the daemon (runs on login automatically)
+
+        brew services start rpaster
+
+      Step 2: Add SSH tunnel to your remote host(s)
+
+        Add to ~/.ssh/config:
+
+          Host your-remote-host
+              RemoteForward 127.0.0.1:18339 127.0.0.1:18339
+
+      Step 3: Install tmux plugin on the remote machine
+
+        rpaster install --remote your-remote-host
+
+        Or manually: https://github.com/MadAppGang/tmux-copy-image#remote-setup
+
+      Step 4: Use it!
+
+        SSH to your remote, open tmux, copy an image locally,
+        then press:  prefix + V
+
+      Verify:    rpaster doctor
+      Full docs: https://github.com/MadAppGang/tmux-copy-image
+    EOS
   end
 
   service do
