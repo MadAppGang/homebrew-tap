@@ -32,6 +32,45 @@ class Rpaster < Formula
     bin.install "rpaster"
   end
 
+  def caveats
+    <<~EOS
+      ┌─────────────────────────────────────────────────────┐
+      │  rpaster — clipboard image paste over SSH           │
+      └─────────────────────────────────────────────────────┘
+
+      Step 1: Start the daemon (runs on login automatically)
+
+        brew services start rpaster
+
+      Step 2: Add SSH tunnel to your remote host(s)
+
+        Add to ~/.ssh/config:
+
+          Host your-remote-host
+              RemoteForward 127.0.0.1:18339 127.0.0.1:18339
+
+      Step 3: Install tmux plugin on the remote machine
+
+        ssh your-remote-host
+        mkdir -p ~/.tmux/plugins/tmux-clip-image/scripts
+        # Copy plugin files (or use the installer):
+        rpaster install --remote your-remote-host
+
+        Or manually add to remote ~/.tmux.conf:
+          run-shell ~/.tmux/plugins/tmux-clip-image/tmux-clip-image.tmux
+
+      Step 4: Use it!
+
+        SSH to your remote, open tmux, copy an image locally,
+        then press:  prefix + V
+
+        The image file path will appear in your tmux pane.
+
+      Verify setup:  rpaster doctor
+      More info:     https://github.com/MadAppGang/tmux-copy-image
+    EOS
+  end
+
   service do
     run [opt_bin/"rpaster", "serve"]
     keep_alive true
