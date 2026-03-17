@@ -1,30 +1,30 @@
 class Rpaster < Formula
   desc "Paste clipboard images into remote tmux sessions over SSH"
   homepage "https://github.com/MadAppGang/tmux-copy-image"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.0/rpaster_darwin_amd64.tar.gz"
-      sha256 "d83d7679065ff2fffc1f9542dbcb6b821895317afcee92b746f48ccb2615c05b"
+      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.1/rpaster_darwin_amd64.tar.gz"
+      sha256 "1547025c7cb681a8e8075f388710d0240db97f1fdc0ddaa97be2232c6106a39c"
     end
 
     on_arm do
-      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.0/rpaster_darwin_arm64.tar.gz"
-      sha256 "ae6f72afe0e0d7483018385176b33d7cf6cf61519c5353c2ea158ae06d17080c"
+      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.1/rpaster_darwin_arm64.tar.gz"
+      sha256 "0602e793ac264f942d6429b1a361f8aa7db72ab136393068e2359c1d9dab586e"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.0/rpaster_linux_amd64.tar.gz"
-      sha256 "54844627c012fb316e4255c3e31f77a47c908edb8b357ceef538d5a6df56d474"
+      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.1/rpaster_linux_amd64.tar.gz"
+      sha256 "b1fb731bb05a2a8578a2f8f52741a19aecf18fcd13c6e53a127d8fd1ce0b4229"
     end
 
     on_arm do
-      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.0/rpaster_linux_arm64.tar.gz"
-      sha256 "18337648cc1d149d530e0815b474d1a33ce3f02ab4f129498d1dfb8b265fab8b"
+      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.1/rpaster_linux_arm64.tar.gz"
+      sha256 "67fe04fd5171f6344566e790d0838fc5e5791cccd22c0d584fed46a3eeeca12c"
     end
   end
 
