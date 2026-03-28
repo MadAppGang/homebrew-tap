@@ -7,22 +7,22 @@ class TmuxMcp < Formula
   on_macos do
     on_arm do
       url "https://github.com/MadAppGang/tmux-mcp/releases/download/v1.3.0/tmux-mcp_darwin_arm64.tar.gz"
-      sha256 "068c45a8bad34db4584757b9b99d178706fe0d7e7dbea7b26a39b54b0b54abfd"
+      sha256 "a7190e540280ecc2acce08da1b045949c715dc459ed521285a518b7675816784"
     end
     on_intel do
       url "https://github.com/MadAppGang/tmux-mcp/releases/download/v1.3.0/tmux-mcp_darwin_amd64.tar.gz"
-      sha256 "543db868bca755e011f9bdae8926f35df8fc062bdc9390e21ace1bafebe4e389"
+      sha256 "32eef279d278a0c773c41bff6d3fbfa2edacb7b1ce509f87b9398d473e318127"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/MadAppGang/tmux-mcp/releases/download/v1.3.0/tmux-mcp_linux_arm64.tar.gz"
-      sha256 "2ba36843d23ced5525dc4b96b9c9559c6f5de7da9670dfcfa4cb42d02c8cf82b"
+      sha256 "38b2e9bdb5ae41a50027312904a473cb8a6e3a5d4cc94605d193047e7497e453"
     end
     on_intel do
       url "https://github.com/MadAppGang/tmux-mcp/releases/download/v1.3.0/tmux-mcp_linux_amd64.tar.gz"
-      sha256 "047480fb10fafc0e9cf9494f057c93eb19e373e7ce11cd431d0ebf215bac93f8"
+      sha256 "aa7c1d18760542124151508a837c8aa7901b793098e4d97506cbb1a210bf9c16"
     end
   end
 
