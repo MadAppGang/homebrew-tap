@@ -5,23 +5,23 @@
 class Rpaster < Formula
   desc "Paste clipboard images into remote tmux sessions over SSH"
   homepage "https://github.com/MadAppGang/tmux-copy-image"
-  version "0.1.6"
+  version "0.1.7"
   license "MIT"
 
   depends_on "pngpaste"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.6/rpaster_darwin_amd64.tar.gz"
-      sha256 "d03f37fc08da1fe639002210074cc5626de31bde0ac927e2ed26273330a8a24f"
+      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.7/rpaster_darwin_amd64.tar.gz"
+      sha256 "9284c3368b79c65408c46b3578ca27ae02dad605555d83501d258c5477b43426"
 
       define_method(:install) do
         bin.install "rpaster"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.6/rpaster_darwin_arm64.tar.gz"
-      sha256 "77057ceb46613899b4e11efdadd63e93fcb414ed9988feacc8b57cc42a31a9d3"
+      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.7/rpaster_darwin_arm64.tar.gz"
+      sha256 "019c08ac5e265c71763c71975883af96b14017d88686aa093b0d04ead62d2f6f"
 
       define_method(:install) do
         bin.install "rpaster"
@@ -31,15 +31,15 @@ class Rpaster < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.6/rpaster_linux_amd64.tar.gz"
-      sha256 "7dc27bb8405daa187179b2891ac3a37c4366a55643ab67639fda8e7f76d21b16"
+      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.7/rpaster_linux_amd64.tar.gz"
+      sha256 "f839362c9d97817ebd48c460c8245ba6c191630ef90ef10d3af0a8553f445212"
       define_method(:install) do
         bin.install "rpaster"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.6/rpaster_linux_arm64.tar.gz"
-      sha256 "08ee7bb5af3d7d6fb559f28a296f5c46f8cee07af31025fe49d60f15d54c6896"
+      url "https://github.com/MadAppGang/tmux-copy-image/releases/download/v0.1.7/rpaster_linux_arm64.tar.gz"
+      sha256 "66a77c8f1f5db1c5018e5bcdf9acd1e6cff258945b90872261d2418a0f2d97d8"
       define_method(:install) do
         bin.install "rpaster"
       end
