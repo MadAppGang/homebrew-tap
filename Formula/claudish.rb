@@ -6,12 +6,12 @@ class Claudish < Formula
 
   on_arm do
     url "https://github.com/MadAppGang/claudish/releases/download/v6.6.0/claudish-darwin-arm64"
-    sha256 "d1e09c571a8cb7c17468e6528a0687e4b93d676acd957f6f6f4d378636193e2f"
+    sha256 "d5b61baa8ed57c42bca936524d3ff458fba1b237861a2c85279f2fb9b07029d4"
   end
 
   on_intel do
     url "https://github.com/MadAppGang/claudish/releases/download/v6.6.0/claudish-darwin-x64"
-    sha256 "1a2fc3268d4ebc1184fe885962d71171cdfa6b7b2bcfa478975f59d743639b48"
+    sha256 "2abccab46b0ed03f8ba446576ce8afa019f2e53b9d0edb28066862a2e8fa4a20"
   end
 
   def install
