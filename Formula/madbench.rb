@@ -9,16 +9,16 @@ class Madbench < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/MadAppGang/madbench/releases/download/v0.2.0/madbench_darwin_amd64.tar.gz"
-      sha256 "7c2052a5dc45e2eeffa84d39f726ddb37ab6d7b29de78e9b9b52979b77639ae2"
+      url "https://github.com/MadAppGang/madbench-releases/releases/download/v0.2.0/madbench_darwin_amd64.tar.gz"
+      sha256 "d109640296597db75517efcd53110e6d048ddd7e4bc533cb764a437a8c8c1a87"
 
       define_method(:install) do
         bin.install "madbench"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/MadAppGang/madbench/releases/download/v0.2.0/madbench_darwin_arm64.tar.gz"
-      sha256 "19aade90569889392f8665f24a3a165daee5f42d19addb93bab5c2c4470ba65f"
+      url "https://github.com/MadAppGang/madbench-releases/releases/download/v0.2.0/madbench_darwin_arm64.tar.gz"
+      sha256 "7d334a3237be8d7a466625d26f168f08bd8885756a2159b12aa1b0d39f69a1d2"
 
       define_method(:install) do
         bin.install "madbench"
@@ -28,15 +28,15 @@ class Madbench < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/MadAppGang/madbench/releases/download/v0.2.0/madbench_linux_amd64.tar.gz"
-      sha256 "d0fca9ed95d636422da25d81bdc5702db41276a25c5b9f42495842c1de821a43"
+      url "https://github.com/MadAppGang/madbench-releases/releases/download/v0.2.0/madbench_linux_amd64.tar.gz"
+      sha256 "24ddbd0c7c347e07ad0b531146411cad378583386ba5bf250f78e927133684e5"
       define_method(:install) do
         bin.install "madbench"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/MadAppGang/madbench/releases/download/v0.2.0/madbench_linux_arm64.tar.gz"
-      sha256 "92a70361b223dfb3fa1ab86afff0ac6e281cba09d134a1b2be3ae914547ce889"
+      url "https://github.com/MadAppGang/madbench-releases/releases/download/v0.2.0/madbench_linux_arm64.tar.gz"
+      sha256 "fa5600ffa9f581316055529a73ee6929720b2898d4da6804ce9b92cc3b8785db"
       define_method(:install) do
         bin.install "madbench"
       end
