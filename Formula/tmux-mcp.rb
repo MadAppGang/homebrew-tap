@@ -1,28 +1,28 @@
 class TmuxMcp < Formula
   desc "MCP server for agent-oriented tmux control with native process detection"
   homepage "https://github.com/MadAppGang/tmux-mcp"
-  version "1.5.0"
+  version "1.6.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/MadAppGang/tmux-mcp/releases/download/v1.5.0/tmux-mcp_darwin_arm64.tar.gz"
-      sha256 "c352bf9eb50ddd5b73a335715435e7629234ba7cc19478e49c06967af9b3df86"
+      url "https://github.com/MadAppGang/tmux-mcp/releases/download/v1.6.0/tmux-mcp_darwin_arm64.tar.gz"
+      sha256 "0e9c9d24400b8aeefe6973353d352d85f6cbfe88ac591c0f4505c02c7d97a423"
     end
     on_intel do
-      url "https://github.com/MadAppGang/tmux-mcp/releases/download/v1.5.0/tmux-mcp_darwin_amd64.tar.gz"
-      sha256 "39b8b0ecdb0fad0d18f3999cebce298e3a5b6a1affe665f3835dc8c7a9bbf339"
+      url "https://github.com/MadAppGang/tmux-mcp/releases/download/v1.6.0/tmux-mcp_darwin_amd64.tar.gz"
+      sha256 "f49b2d02db76a8a4babff6efab7a92761525c6b95e2a32faf3a198fa42d7f7d5"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/MadAppGang/tmux-mcp/releases/download/v1.5.0/tmux-mcp_linux_arm64.tar.gz"
-      sha256 "d8005e4e0b55ef64613430bc0ca1ef228aaf6a3c883bb4d0911a839e7a7a8d3d"
+      url "https://github.com/MadAppGang/tmux-mcp/releases/download/v1.6.0/tmux-mcp_linux_arm64.tar.gz"
+      sha256 "2cdc35774f715bd16b0bbf6142a959e6ad8251794b2a9ddcf91bbfd7702fb46c"
     end
     on_intel do
-      url "https://github.com/MadAppGang/tmux-mcp/releases/download/v1.5.0/tmux-mcp_linux_amd64.tar.gz"
-      sha256 "c561b43c8c4a8e4134fb4a7d69a78804e273757be609eacd238ab82dd67c00b5"
+      url "https://github.com/MadAppGang/tmux-mcp/releases/download/v1.6.0/tmux-mcp_linux_amd64.tar.gz"
+      sha256 "0e897a9bb5af6ae12e29993a5ff24b3ccb7b2bf2af5562e76cd30c057f3fc27f"
     end
   end
 
