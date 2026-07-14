@@ -11,7 +11,7 @@ class Magmux < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/MadAppGang/magmux/releases/download/v0.4.3/magmux_darwin_amd64.tar.gz"
-      sha256 "0805e12376a190c30dc012dfc876eff92f83bd732275b914b32ea9ad8c908bc0"
+      sha256 "638df81d4b099f124a32e380dbcf69c8e607d187921b80219b3e50139a2b53eb"
 
       define_method(:install) do
         bin.install "magmux"
@@ -19,7 +19,7 @@ class Magmux < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/MadAppGang/magmux/releases/download/v0.4.3/magmux_darwin_arm64.tar.gz"
-      sha256 "89896b6a96d6ba26aa7ceff662e9e67d26ee784337eb5a78acca2716edb3ec55"
+      sha256 "a3007c5307607f411ee9afe6a4ac85e28406674f80b3793554599682e2e21ecf"
 
       define_method(:install) do
         bin.install "magmux"
@@ -30,14 +30,14 @@ class Magmux < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/MadAppGang/magmux/releases/download/v0.4.3/magmux_linux_amd64.tar.gz"
-      sha256 "5fca7b9897ff2acba8f83d384c49df547d02bdd3ea7d5269d26efb666f6df729"
+      sha256 "9ea1e4c969b079586d0e474ba9d28876ad3ffdc741606604dcefaae8245fd899"
       define_method(:install) do
         bin.install "magmux"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/MadAppGang/magmux/releases/download/v0.4.3/magmux_linux_arm64.tar.gz"
-      sha256 "604e60592c662c9a1fc5fb516a11f3384a41e130641a9f8f87f3cdf37f7b4f62"
+      sha256 "46124ecc69941ae84a1c936b70ca595c0843492d9d92d6dc6c6dedade9e19e50"
       define_method(:install) do
         bin.install "magmux"
       end
