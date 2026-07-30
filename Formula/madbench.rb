@@ -5,20 +5,20 @@
 class Madbench < Formula
   desc "Go-based testing harness for agentic coding tools"
   homepage "https://github.com/MadAppGang/madbench"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/MadAppGang/madbench-releases/releases/download/v0.2.0/madbench_darwin_amd64.tar.gz"
-      sha256 "d109640296597db75517efcd53110e6d048ddd7e4bc533cb764a437a8c8c1a87"
+      url "https://github.com/MadAppGang/madbench-releases/releases/download/v0.3.0/madbench_darwin_amd64.tar.gz"
+      sha256 "7aaa8bae5a5dce29712159018dd8dad23cf2473d27ec07d312deb3a931a62ed5"
 
       define_method(:install) do
         bin.install "madbench"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/MadAppGang/madbench-releases/releases/download/v0.2.0/madbench_darwin_arm64.tar.gz"
-      sha256 "7d334a3237be8d7a466625d26f168f08bd8885756a2159b12aa1b0d39f69a1d2"
+      url "https://github.com/MadAppGang/madbench-releases/releases/download/v0.3.0/madbench_darwin_arm64.tar.gz"
+      sha256 "ba7a93ff2d6acb0851a42e2a1952a37de114c48b35d8bdd3802177864b48d1df"
 
       define_method(:install) do
         bin.install "madbench"
@@ -28,15 +28,15 @@ class Madbench < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/MadAppGang/madbench-releases/releases/download/v0.2.0/madbench_linux_amd64.tar.gz"
-      sha256 "24ddbd0c7c347e07ad0b531146411cad378583386ba5bf250f78e927133684e5"
+      url "https://github.com/MadAppGang/madbench-releases/releases/download/v0.3.0/madbench_linux_amd64.tar.gz"
+      sha256 "e45cfbf70fdd9548e074caa09611d13bce9c9ffec65215fde154cfe86332b6ef"
       define_method(:install) do
         bin.install "madbench"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/MadAppGang/madbench-releases/releases/download/v0.2.0/madbench_linux_arm64.tar.gz"
-      sha256 "fa5600ffa9f581316055529a73ee6929720b2898d4da6804ce9b92cc3b8785db"
+      url "https://github.com/MadAppGang/madbench-releases/releases/download/v0.3.0/madbench_linux_arm64.tar.gz"
+      sha256 "3823f57352a0f978e094788b9d3999a39c8217eec6578ea30111f03193a70aa9"
       define_method(:install) do
         bin.install "madbench"
       end
