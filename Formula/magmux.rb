@@ -5,21 +5,21 @@
 class Magmux < Formula
   desc "Minimal terminal multiplexer written in Go. Zero third-party dependencies."
   homepage "https://github.com/MadAppGang/magmux"
-  version "0.6.0"
+  version "0.7.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/MadAppGang/magmux/releases/download/v0.6.0/magmux_darwin_amd64.tar.gz"
-      sha256 "2dfdc629f03eeb076e7e87c9321181d22223455f6da5357cdaf1c8cf7b053bf4"
+      url "https://github.com/MadAppGang/magmux/releases/download/v0.7.0/magmux_darwin_amd64.tar.gz"
+      sha256 "fd200dccc5530ffd755a348fa5b1637291b30fe03ab131d17ef3c0490bd38c05"
 
       define_method(:install) do
         bin.install "magmux"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/MadAppGang/magmux/releases/download/v0.6.0/magmux_darwin_arm64.tar.gz"
-      sha256 "e2b81fbb6815ea00758d96c00c343960935fcfa75c7758b7d7f4d17644649c2e"
+      url "https://github.com/MadAppGang/magmux/releases/download/v0.7.0/magmux_darwin_arm64.tar.gz"
+      sha256 "18c8452c206a2b1b93f9084140c60245771a602b5717bd11a0319407ab82cba1"
 
       define_method(:install) do
         bin.install "magmux"
@@ -29,15 +29,15 @@ class Magmux < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/MadAppGang/magmux/releases/download/v0.6.0/magmux_linux_amd64.tar.gz"
-      sha256 "b368c432046f5a3d331f3814298d3e33fa5ee803d3222cdea23b06a95f63af8d"
+      url "https://github.com/MadAppGang/magmux/releases/download/v0.7.0/magmux_linux_amd64.tar.gz"
+      sha256 "847d6b3e0d77798facac0837f2912b18f33d2679f1c1c19511140ba0ede6ab50"
       define_method(:install) do
         bin.install "magmux"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/MadAppGang/magmux/releases/download/v0.6.0/magmux_linux_arm64.tar.gz"
-      sha256 "8f7017e4e44c04c4251d816ffc1943a26ef42124175a10b166086db3f44f91d4"
+      url "https://github.com/MadAppGang/magmux/releases/download/v0.7.0/magmux_linux_arm64.tar.gz"
+      sha256 "2ff5b630ee290ec5ec629226124a11cce1616a8ecc4034118f9bd916a4db5ee0"
       define_method(:install) do
         bin.install "magmux"
       end
