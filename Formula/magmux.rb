@@ -5,21 +5,21 @@
 class Magmux < Formula
   desc "Minimal terminal multiplexer written in Go. Zero third-party dependencies."
   homepage "https://github.com/MadAppGang/magmux"
-  version "0.8.1"
+  version "0.9.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/MadAppGang/magmux/releases/download/v0.8.1/magmux_darwin_amd64.tar.gz"
-      sha256 "38e7403503528371081b05b91f44672d0f88335e8e6b4fb32caf0d2ffba36998"
+      url "https://github.com/MadAppGang/magmux/releases/download/v0.9.0/magmux_darwin_amd64.tar.gz"
+      sha256 "8a19327b257b090a29d57eea6946dea3381d5674ce1918c50f225a461bac01e3"
 
       define_method(:install) do
         bin.install "magmux"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/MadAppGang/magmux/releases/download/v0.8.1/magmux_darwin_arm64.tar.gz"
-      sha256 "47cb01e30338776496433736f07d48e43388a4bca019a05980a8cc91f1538d40"
+      url "https://github.com/MadAppGang/magmux/releases/download/v0.9.0/magmux_darwin_arm64.tar.gz"
+      sha256 "7983ef95700abc217f0bfe272d5813d3b923636bb22cee9c09f1bfc7ec7bcd33"
 
       define_method(:install) do
         bin.install "magmux"
@@ -29,15 +29,15 @@ class Magmux < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/MadAppGang/magmux/releases/download/v0.8.1/magmux_linux_amd64.tar.gz"
-      sha256 "259db47a3b94388d519e828b1bd9ffe606956c3afc32486a8b3d5ffa283ef8f9"
+      url "https://github.com/MadAppGang/magmux/releases/download/v0.9.0/magmux_linux_amd64.tar.gz"
+      sha256 "cff4662849579b453f290f7b2290cbaadbc30fb2450d9566883a4d5eabd3828c"
       define_method(:install) do
         bin.install "magmux"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/MadAppGang/magmux/releases/download/v0.8.1/magmux_linux_arm64.tar.gz"
-      sha256 "01d1cd4ec5c5c4efccde9fc5c1ae5e936be635c5190b85c053c129c9c2429dc7"
+      url "https://github.com/MadAppGang/magmux/releases/download/v0.9.0/magmux_linux_arm64.tar.gz"
+      sha256 "78e2dc41c07c813957dafe4d0855708f2da128fad073e13e2eec27d81026b9ed"
       define_method(:install) do
         bin.install "magmux"
       end
@@ -45,9 +45,6 @@ class Magmux < Formula
   end
 
   test do
-    # No expected-status argument: `magmux --version` exits 0. The formula
-    # used to pass 1 here, so `brew test magmux` failed against every release
-    # that ever shipped — shell_output raises when the status does not match.
-    assert_match version.to_s, shell_output("#{bin}/magmux --version 2>&1")
+    assert_match version.to_s, shell_output("#{bin}/magmux --version 2>&1", 1)
   end
 end
