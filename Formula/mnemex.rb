@@ -1,28 +1,28 @@
 class Mnemex < Formula
   desc "Seven-layer code memory, benchmarked — AST-aware semantic code index"
   homepage "https://github.com/MadAppGang/mnemex"
-  version "0.32.0"
+  version "0.33.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/MadAppGang/mnemex/releases/download/v0.32.0/mnemex-darwin-arm64"
-      sha256 "30d347cc15a57f4997153d2688450552f6999088ddfd021cc7e61e13b395f403"
+      url "https://github.com/MadAppGang/mnemex/releases/download/v0.33.0/mnemex-darwin-arm64"
+      sha256 "cd99d72ca7060e8f1816b020dd3018ddc33496066ed35ba3ff4047f6a6ef4fd3"
     end
     on_intel do
-      url "https://github.com/MadAppGang/mnemex/releases/download/v0.32.0/mnemex-darwin-x64"
-      sha256 "01a03b1fcca4c4930682e8bece34fe94bbe98a426e0d93ef27c53cb90711d14b"
+      url "https://github.com/MadAppGang/mnemex/releases/download/v0.33.0/mnemex-darwin-x64"
+      sha256 "76c8d839130e0df238ec44c84ffdd6c3919a95c8ce2a3278671b24b0e31b0710"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/MadAppGang/mnemex/releases/download/v0.32.0/mnemex-linux-arm64"
-      sha256 "82ad2ef38f00f7d3a479a24b9e64e319acfddd0ed9fd412bcf282dd0b218d4aa"
+      url "https://github.com/MadAppGang/mnemex/releases/download/v0.33.0/mnemex-linux-arm64"
+      sha256 "2679c70758e301df4136d56d96f61ffd138b683d43391c17dc7b18f95a03e961"
     end
     on_intel do
-      url "https://github.com/MadAppGang/mnemex/releases/download/v0.32.0/mnemex-linux-x64"
-      sha256 "47b3534049e2e231e637752c6f9915d881cae2924bae991973e3c645e0c9cd02"
+      url "https://github.com/MadAppGang/mnemex/releases/download/v0.33.0/mnemex-linux-x64"
+      sha256 "32bce3a0983c562286bce75dbf680a483d4a1e4414423d9d76910023d20136a0"
     end
   end
 
