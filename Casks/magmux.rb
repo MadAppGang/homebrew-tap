@@ -6,25 +6,25 @@ cask "magmux" do
     end
   end
 
-  version "0.15.1"
+  version "0.16.0"
 
   on_macos do
     on_arm do
-      sha256 "bc1ad66b09f7344d725dc010240bcdc868cfa361e0555ffdd2287c9fb9be7e3a"
+      sha256 "b2cee825228eb7cdb9622d6de3bc977ab15b18888235851f45b3d514c2762a15"
       url "https://github.com/MadAppGang/magmux/releases/download/v#{version}/magmux_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "a3eaa190fc13700cdd62d58a22cfa5211fa42cc8332fd69fb49b3f99ff667604"
+      sha256 "ac7de7f05971b3f2f7927534ced5342fdb79d2dc426ef35201a488c63070e9ed"
       url "https://github.com/MadAppGang/magmux/releases/download/v#{version}/magmux_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "c0076445e1b0a8c982c680e8a421309518343b16b0d0fbf8d5b8bee09c98d372"
+      sha256 "24f32a3b935263ea0da747096c22c9a9667b8534cf421726805ab2951bc36917"
       url "https://github.com/MadAppGang/magmux/releases/download/v#{version}/magmux_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "e3e8c16d50e7978cc27a1bd75293c785dd081f607778af3a3e67ffec387d2f83"
+      sha256 "1c7d7788c263b833b9a55cb0445111ca238f6299e705a52bbc4e70fcb9493158"
       url "https://github.com/MadAppGang/magmux/releases/download/v#{version}/magmux_linux_amd64.tar.gz"
     end
   end
