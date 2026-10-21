@@ -6,25 +6,25 @@ cask "madbench" do
     end
   end
 
-  version "0.49.0"
+  version "0.50.0"
 
   on_macos do
     on_arm do
-      sha256 "3fbb36a35e6417a49dc4dd904d9b852b100e64626cd720e3d0c937670b89041d"
+      sha256 "07a7ec9b225380232e2bde27989a1788e7d02631df9af320b538e91d40008b3d"
       url "https://github.com/MadAppGang/madbench-releases/releases/download/v#{version}/madbench_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "dceeb745063a34117247f50280016cb657c049588d1eca34e14288c985637149"
+      sha256 "76561261610206de1d46a5ea11b89a62cfc4d25286330e290da65c28490dda9a"
       url "https://github.com/MadAppGang/madbench-releases/releases/download/v#{version}/madbench_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "e272f7a1397c5e25480651db50b5475af95a5c110db248d858e71009cea7876e"
+      sha256 "c08f0aa01242300387674212d118f9de8d34cd4fdcdcd5f5e8605e0c5a33ca84"
       url "https://github.com/MadAppGang/madbench-releases/releases/download/v#{version}/madbench_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "d18d6733b7ed9d47aa90729397143205ae5c54b371ed7e71a0991349b502f282"
+      sha256 "87b87ab8b7dda6cf098aef053d8b4b7731806d47b63c58195f61c07f77451f78"
       url "https://github.com/MadAppGang/madbench-releases/releases/download/v#{version}/madbench_linux_amd64.tar.gz"
     end
   end
