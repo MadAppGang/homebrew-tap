@@ -1,17 +1,17 @@
 class Claudish < Formula
   desc "Multi-model AI CLI - run Claude Code with any model"
   homepage "https://github.com/MadAppGang/claudish"
-  version "14.2.0"
+  version "14.3.0"
   license "MIT"
 
   on_arm do
-    url "https://github.com/MadAppGang/claudish/releases/download/v14.2.0/claudish-darwin-arm64"
-    sha256 "7b7fe1252f1a042aab22ba61c09877c85313de53d90d1e6146fae7f54aa89a57"
+    url "https://github.com/MadAppGang/claudish/releases/download/v14.3.0/claudish-darwin-arm64"
+    sha256 "da6a1eb37a7c01cf828b35fa6d95b14aa1d43c2500621e48f66348f39bdabf73"
   end
 
   on_intel do
-    url "https://github.com/MadAppGang/claudish/releases/download/v14.2.0/claudish-darwin-x64"
-    sha256 "3b5920593256b492be31f4e0c5fea5563e7e1a1ca37ec28349055362f4bb3e41"
+    url "https://github.com/MadAppGang/claudish/releases/download/v14.3.0/claudish-darwin-x64"
+    sha256 "7502b9838d0dba21f37bb55175abaea57d0c9befc3b14e68edbdd2906468c0c7"
   end
 
   def install
