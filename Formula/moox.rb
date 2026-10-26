@@ -1,7 +1,7 @@
 class Moox < Formula
   desc "Agentic tmux distribution: config, plugins, tt, Claude continuity, save/restore"
   homepage "https://github.com/MadAppGang/moox"
-  version "0.1.1"
+  version "0.1.2"
   # moox itself is MIT; the archive also ships tmux-jump unmodified under GPL-3.0.
   license all_of: ["MIT", "GPL-3.0-only"]
 
@@ -12,23 +12,23 @@ class Moox < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/MadAppGang/moox/releases/download/v0.1.1/moox_darwin_arm64.tar.gz"
-      sha256 "27b3bb4fc10837fe16877da302cded9fc2b062ecf83ffd23d6d2bdcf38d72737"
+      url "https://github.com/MadAppGang/moox/releases/download/v0.1.2/moox_darwin_arm64.tar.gz"
+      sha256 "9b8371bd4e680a0cd49dd4d9e050451013bddd72a920242e4add7ebb336ba542"
     end
     on_intel do
-      url "https://github.com/MadAppGang/moox/releases/download/v0.1.1/moox_darwin_amd64.tar.gz"
-      sha256 "9cd368e84bba52f97f51ed5d03ccc3e2ebb473c498d6ceae59d8a22bc8207ef7"
+      url "https://github.com/MadAppGang/moox/releases/download/v0.1.2/moox_darwin_amd64.tar.gz"
+      sha256 "9017eab5db83a880c77a96b183fd0b33fb576cc701929138f295be614afc09b5"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/MadAppGang/moox/releases/download/v0.1.1/moox_linux_arm64.tar.gz"
-      sha256 "6931230ca98e0b3e86e40c396d91cf42cc6766db355d3a36d445fa88f3750101"
+      url "https://github.com/MadAppGang/moox/releases/download/v0.1.2/moox_linux_arm64.tar.gz"
+      sha256 "8450ec2f80b3997aa147660887bb41e8ea970dc34958b1eca2f0b6fa787d4848"
     end
     on_intel do
-      url "https://github.com/MadAppGang/moox/releases/download/v0.1.1/moox_linux_amd64.tar.gz"
-      sha256 "2edfbc1e1738fd7ba3afa93e1bd7fea6df1bdc0149829dd973b7e3e55c083850"
+      url "https://github.com/MadAppGang/moox/releases/download/v0.1.2/moox_linux_amd64.tar.gz"
+      sha256 "fa4cc9d4d40ddd02ea7f13c1e1f96a69f54b33213325d6af67be9ee4b490123a"
     end
   end
 
